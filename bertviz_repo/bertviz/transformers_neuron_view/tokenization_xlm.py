@@ -114,9 +114,10 @@ class XLMTokenizer(PreTrainedTokenizer):
 
     def __init__(self, vocab_file, merges_file, unk_token="<unk>", bos_token="<s>",
                  sep_token="</s>", pad_token="<pad>", cls_token="</s>",
-                 mask_token="<special1>", additional_special_tokens=["<special0>",
-                 "<special1>", "<special2>", "<special3>", "<special4>", "<special5>",
-                 "<special6>", "<special7>", "<special8>", "<special9>"], **kwargs):
+                 mask_token="<special1>", additional_special_tokens=None, **kwargs):
+        additional_special_tokens = ["<special0>",
+                     "<special1>", "<special2>", "<special3>", "<special4>", "<special5>",
+                     "<special6>", "<special7>", "<special8>", "<special9>"] if additional_special_tokens is None else additional_special_tokens
         super(XLMTokenizer, self).__init__(unk_token=unk_token, bos_token=bos_token,
                                            sep_token=sep_token, pad_token=pad_token,
                                            cls_token=cls_token, mask_token=mask_token,

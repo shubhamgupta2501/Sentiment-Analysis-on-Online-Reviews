@@ -214,7 +214,7 @@ class TransfoXLConfig(PretrainedConfig):
 
     def __init__(self,
                  vocab_size_or_config_json_file=267735,
-                 cutoffs=[20000, 40000, 200000],
+                 cutoffs=None,
                  d_model=1024,
                  d_embed=1024,
                  n_head=16,
@@ -243,6 +243,7 @@ class TransfoXLConfig(PretrainedConfig):
                  **kwargs):
         """Constructs TransfoXLConfig.
         """
+        cutoffs = [20000, 40000, 200000] if cutoffs is None else cutoffs
         super(TransfoXLConfig, self).__init__(**kwargs)
 
         if isinstance(vocab_size_or_config_json_file, str) or (sys.version_info[0] == 2

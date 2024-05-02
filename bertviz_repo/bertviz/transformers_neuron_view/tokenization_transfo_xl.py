@@ -69,7 +69,8 @@ class TransfoXLTokenizer(PreTrainedTokenizer):
     def __init__(self, special=None, min_freq=0, max_size=None, lower_case=False,
                  delimiter=None, vocab_file=None, pretrained_vocab_file=None,
                  never_split=None, unk_token="<unk>", eos_token="<eos>",
-                 additional_special_tokens=["<formula>"], **kwargs):
+                 additional_special_tokens=None, **kwargs):
+        additional_special_tokens = ["<formula>"] if additional_special_tokens is None else additional_special_tokens
         super(TransfoXLTokenizer, self).__init__(unk_token=unk_token, eos_token=eos_token,
                                                  additional_special_tokens=additional_special_tokens,
                                                  **kwargs)

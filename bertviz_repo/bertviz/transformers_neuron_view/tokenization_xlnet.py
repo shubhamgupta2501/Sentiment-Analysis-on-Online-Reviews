@@ -65,7 +65,8 @@ class XLNetTokenizer(PreTrainedTokenizer):
                  do_lower_case=False, remove_space=True, keep_accents=False,
                  bos_token="<s>", eos_token="</s>", unk_token="<unk>", sep_token="<sep>",
                  pad_token="<pad>", cls_token="<cls>", mask_token="<mask>",
-                 additional_special_tokens=["<eop>", "<eod>"], **kwargs):
+                 additional_special_tokens=None, **kwargs):
+        additional_special_tokens = ["<eop>", "<eod>"] if additional_special_tokens is None else additional_special_tokens
         super(XLNetTokenizer, self).__init__(bos_token=bos_token, eos_token=eos_token,
                                              unk_token=unk_token, sep_token=sep_token,
                                              pad_token=pad_token, cls_token=cls_token,
