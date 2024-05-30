@@ -19,8 +19,6 @@
 
 """PyTorch OpenAI GPT-2 model."""
 
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 import collections
 import json
 import logging

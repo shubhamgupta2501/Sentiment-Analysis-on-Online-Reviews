@@ -15,8 +15,6 @@
 # limitations under the License.
 """ BERT classification fine-tuning: utilities to work with GLUE tasks """
 
-from __future__ import absolute_import, division, print_function
-
 import csv
 import logging
 import os

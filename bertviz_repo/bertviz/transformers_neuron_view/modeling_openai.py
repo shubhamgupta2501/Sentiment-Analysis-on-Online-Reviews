@@ -15,8 +15,6 @@
 # limitations under the License.
 """PyTorch OpenAI GPT model."""
 
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 import collections
 import json
 import logging
